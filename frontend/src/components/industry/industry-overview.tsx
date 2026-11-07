@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   CheckCircle2,
   Target,
 } from "lucide-react";
@@ -15,7 +14,7 @@ export default function IndustryOverview({
       <div className="industry-content-container">
         <div className="industry-overview-grid">
           <div>
-            <span className="eyebrow">INDUSTRY OVERVIEW</span>
+            <span className="eyebrow">LOCAL INDUSTRY SOLUTION</span>
             <h2>
               A unified approach
               <br />
@@ -28,8 +27,8 @@ export default function IndustryOverview({
             <div className="industry-overview-note">
               <Target size={19} />
               <span>
-                Designed for enterprise operations, scalable deployment and
-                modular industry expansion.
+                Developed in Myanmar by ApexiveAI and configured around your
+                workflows, existing systems and operating requirements.
               </span>
             </div>
           </div>

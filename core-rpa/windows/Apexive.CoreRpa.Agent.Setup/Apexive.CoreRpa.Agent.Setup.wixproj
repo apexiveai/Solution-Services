@@ -1,0 +1,12 @@
+<Project Sdk="WixToolset.Sdk/5.0.2">
+  <PropertyGroup>
+    <OutputName>Apexive.CoreRpa.Agent.Setup</OutputName>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">1.0.0</PackageVersion>
+    <AgentPublishDir Condition="'$(AgentPublishDir)' == ''">$(MSBuildThisFileDirectory)..\..\publish\win-x64</AgentPublishDir>
+    <DefineConstants>$(DefineConstants);AgentPublishDir=$(AgentPublishDir);PackageVersion=$(PackageVersion)</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Apexive.CoreRpa.Windows.Agent\Apexive.CoreRpa.Windows.Agent.csproj"
+                      ReferenceOutputAssembly="false" />
+  </ItemGroup>
+</Project>

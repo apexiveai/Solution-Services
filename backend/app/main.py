@@ -5,8 +5,8 @@ from app.config import settings
 from app.database import Base, engine
 from app import models  # noqa: F401 - register SQLAlchemy models
 from app.routers import health, identity, tenants, audit
-from backend.app.init_phase2 import router as phase2_router
-from app.modules.telecom import models as telecom_models  # noqa: F401
+from app.phase2 import router as phase2_router
+from app.modules.telecom.router import router as telecom_router
 from app.modules.main import router as industry_modules_router
 
 @asynccontextmanager
@@ -36,7 +36,7 @@ app.include_router(identity.router)
 app.include_router(tenants.router)
 app.include_router(audit.router)
 app.include_router(phase2_router)
-app.include_router(telecom_models)
+app.include_router(telecom_router)
 app.include_router(industry_modules_router)
 
 @app.get("/")

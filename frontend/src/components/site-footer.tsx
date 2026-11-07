@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Globe2 } from "lucide-react";
 
 export default function SiteFooter() {
@@ -43,10 +44,11 @@ export default function SiteFooter() {
 
         <div className="footer-column">
           <h4>Technologies</h4>
-          <Link href="/products/ai">Artificial Intelligence</Link>
-          <Link href="/products/automation">Automation</Link>
-          <Link href="/products/data">Big Data & Analytics</Link>
-          <Link href="/products/cloud">Cloud Solutions</Link>
+          <Link href="/products/vertical-llms">Vertical LLMs</Link>
+          <Link href="/products/ai-agent-platform">AI Agent Platform</Link>
+          <Link href="/products/dataatlas">DataAtlas</Link>
+          <Link href="/products/edge-intelligence">Edge Intelligence</Link>
+          <Link href="/products">All Products</Link>
         </div>
 
         <div className="footer-column">
@@ -62,6 +64,15 @@ export default function SiteFooter() {
 
       <div className="footer-bottom">
         <span>© 2026 ApexiveAI. All rights reserved.</span>
+        <div className="footer-creator-mark">
+          <Image
+            src="/bhone-htet-naing-copyright.png"
+            alt="Copyright logo of Bhone Htet Naing — Innovator, Developer, Researcher"
+            width={1152}
+            height={768}
+          />
+          <span>© 2026 Bhone Htet Naing.<br />All rights reserved.</span>
+        </div>
         <div>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Use</Link>

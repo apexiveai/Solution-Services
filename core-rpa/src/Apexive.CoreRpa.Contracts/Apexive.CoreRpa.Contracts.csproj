@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Apexive.CoreRpa.Contracts</AssemblyName>
+    <RootNamespace>Apexive.CoreRpa.Contracts</RootNamespace>
+  </PropertyGroup>
+</Project>

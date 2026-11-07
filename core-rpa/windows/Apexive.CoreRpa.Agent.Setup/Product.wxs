@@ -1,0 +1,37 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="Apexive CoreRPA Windows Agent"
+           Manufacturer="ApexiveAI"
+           Version="$(var.PackageVersion)"
+           UpgradeCode="D7F641F5-5F7A-4C49-AAD9-1471036C36DF"
+           Scope="perMachine">
+    <MajorUpgrade DowngradeErrorMessage="A newer Apexive CoreRPA Agent is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <Feature Id="Main" Title="Apexive CoreRPA Windows Agent">
+      <ComponentRef Id="AgentService" />
+    </Feature>
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="ApexiveDirectory" Name="ApexiveAI">
+        <Directory Id="AgentDirectory" Name="CoreRPA Agent" />
+      </Directory>
+    </StandardDirectory>
+    <Component Id="AgentService" Directory="AgentDirectory" Guid="*">
+      <File Id="AgentExecutable"
+            Source="$(var.AgentPublishDir)\Apexive.CoreRpa.Windows.Agent.exe"
+            KeyPath="yes" />
+      <ServiceInstall Id="AgentServiceInstall"
+                      Name="ApexiveCoreRpaAgent"
+                      DisplayName="Apexive CoreRPA Agent"
+                      Description="Executes licensed AIS and CY workflows for Apexive CoreRPA."
+                      Type="ownProcess"
+                      Start="demand"
+                      ErrorControl="normal"
+                      Account="NT AUTHORITY\LocalService"
+                      Vital="yes" />
+      <ServiceControl Id="AgentServiceControl"
+                      Name="ApexiveCoreRpaAgent"
+                      Stop="both"
+                      Remove="uninstall"
+                      Wait="yes" />
+    </Component>
+  </Package>
+</Wix>

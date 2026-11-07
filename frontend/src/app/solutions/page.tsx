@@ -3,9 +3,9 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { industries } from "@/data/industries";
 
 export const metadata = {
-  title: "Industry Solutions | ApexiveAI",
+  title: "Myanmar-Built Enterprise Solutions | ApexiveAI",
   description:
-    "Explore ApexiveAI industry solutions for telecom, postal, transportation, public services, finance, energy and manufacturing.",
+    "Explore locally developed ApexiveAI enterprise solutions for Myanmar organizations across logistics, finance, banking, government, healthcare, commerce and more.",
 };
 
 export default function SolutionsPage() {
@@ -21,22 +21,22 @@ export default function SolutionsPage() {
             <span>Solutions & Services</span>
           </div>
 
-          <span className="eyebrow">APEXIVEAI / INDUSTRY SOLUTIONS</span>
+          <span className="eyebrow">APEXIVEAI / BUILT IN MYANMAR</span>
 
           <h1>
-            Technology for
+            Local technology.
             <br />
-            <span>every industry.</span>
+            <span>Solutions for Myanmar.</span>
           </h1>
 
           <p>
-            We combine artificial intelligence, big data, cloud computing and
-            enterprise platforms to help organizations modernize operations,
-            connect systems and accelerate digital transformation.
+            Enterprise products and services developed by ApexiveAI in Myanmar.
+            Connect existing systems and improve everyday workflows with
+            locally supported solutions, including Apexive CoreRPA.
           </p>
 
           <Link href="#industry-list" className="button-primary">
-            Explore Industries <ArrowRight size={17} />
+            Explore Enterprise Solutions <ArrowRight size={17} />
           </Link>
         </div>
       </section>
@@ -44,19 +44,19 @@ export default function SolutionsPage() {
       <section className="solutions-intro">
         <div className="industry-content-container solutions-intro-grid">
           <div>
-            <span className="eyebrow">INDUSTRY-FOCUSED TECHNOLOGY</span>
+            <span className="eyebrow">DESIGNED AND DEVELOPED IN MYANMAR</span>
             <h2>
-              Enterprise capabilities.
+              Local products.
               <br />
-              <span>Industry-specific solutions.</span>
+              <span>Configured for your operations.</span>
             </h2>
           </div>
 
           <p>
-            Every industry has different operational challenges. ApexiveAI
-            combines a shared enterprise platform with modular industry
-            applications, enabling organizations to adopt the capabilities
-            they need while maintaining a consistent technology foundation.
+            ApexiveAI builds enterprise technology in Myanmar for the way local
+            organizations work. Combine CoreRPA workflow automation with
+            industry-focused products and services, configured for existing
+            applications, approval paths and operational requirements.
           </p>
         </div>
       </section>
@@ -65,17 +65,17 @@ export default function SolutionsPage() {
         <div className="industry-content-container">
           <div className="industry-section-heading">
             <div>
-              <span className="eyebrow">OUR INDUSTRY PORTFOLIO</span>
+              <span className="eyebrow">APEXIVEAI SOLUTION PORTFOLIO</span>
               <h2>
-                Explore our
+                Built for Myanmar.
                 <br />
-                <span>industry solutions.</span>
+                <span>Explore by industry.</span>
               </h2>
             </div>
 
             <p>
-              Discover intelligent platforms and operational capabilities
-              designed for your business environment.
+              Explore locally developed solutions for finance, logistics,
+              customer service, public services, healthcare and more.
             </p>
           </div>
 
@@ -89,20 +89,26 @@ export default function SolutionsPage() {
                   className="solutions-directory-card"
                   key={industry.slug}
                 >
-                  <div className="directory-card-top">
-                    <span>{industry.number} / INDUSTRY</span>
-                    <div>
-                      <Icon size={25} />
-                    </div>
+                  <div className="solutions-card-visual" aria-hidden="true">
+                    <span className="solutions-card-number">
+                      {industry.number} / 18
+                    </span>
+                    <span className="solutions-card-orbit" />
+                    <Icon size={58} strokeWidth={1.2} />
+                    <span className="solutions-card-origin">
+                      APEXIVEAI / MYANMAR
+                    </span>
                   </div>
 
-                  <h3>{industry.shortTitle}</h3>
-                  <h4>{industry.subtitle}</h4>
-                  <p>{industry.description}</p>
+                  <div className="solutions-card-content">
+                    <h3>{industry.shortTitle}</h3>
+                    <h4>{industry.subtitle}</h4>
+                    <p>{industry.description}</p>
 
-                  <div className="directory-card-bottom">
-                    <span>Explore industry solutions</span>
-                    <ArrowUpRight size={17} />
+                    <div className="directory-card-bottom">
+                      <span>Explore {industry.shortTitle} solutions</span>
+                      <ArrowUpRight size={17} />
+                    </div>
                   </div>
                 </Link>
               );

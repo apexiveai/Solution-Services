@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexiveai.com/schemas/core-rpa/workflow-v1.schema.json",
+  "title": "Apexive CoreRPA Studio Workflow Contract v1",
+  "oneOf": [
+    { "$ref": "#/$defs/ais" },
+    { "$ref": "#/$defs/cy" }
+  ],
+  "$defs": {
+    "ais": {
+      "type": "object",
+      "required": ["runtime", "contract_version", "steps"],
+      "properties": {
+        "runtime": { "const": "AIS" },
+        "contract_version": { "const": 1 },
+        "steps": {
+          "type": "array",
+          "maxItems": 200,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": ["type", "key", "value"],
+                "properties": {
+                  "type": { "const": "set_variable" },
+                  "key": { "type": "string", "minLength": 1, "maxLength": 64 },
+                  "value": {}
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "required": ["type", "key", "prompt"],
+                "properties": {
+                  "type": { "const": "prompt" },
+                  "key": { "type": "string", "minLength": 1, "maxLength": 64 },
+                  "prompt": { "type": "string", "minLength": 1, "maxLength": 8000 }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "cy": {
+      "type": "object",
+      "required": ["runtime", "contract_version", "rules"],
+      "properties": {
+        "runtime": { "const": "CY" },
+        "contract_version": { "const": 1 },
+        "rules": {
+          "type": "array",
+          "maxItems": 200,
+          "items": {
+            "type": "object",
+            "required": ["id", "field", "equals", "severity", "title", "recommended_response"],
+            "properties": {
+              "id": { "type": "string", "minLength": 1, "maxLength": 120 },
+              "field": { "type": "string", "minLength": 1, "maxLength": 120 },
+              "equals": {},
+              "severity": { "enum": ["INFO", "LOW", "MEDIUM", "HIGH", "CRITICAL"] },
+              "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+              "recommended_response": { "type": "string", "minLength": 1, "maxLength": 500 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

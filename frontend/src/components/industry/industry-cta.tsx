@@ -13,7 +13,7 @@ export default function IndustryCTA({
         <div className="industry-content-container">
           <div className="industry-section-heading">
             <div>
-              <span className="eyebrow">PLATFORM ARCHITECTURE</span>
+              <span className="eyebrow">APEXIVEAI / MYANMAR-BUILT PLATFORM</span>
               <h2>
                 One platform.
                 <br />
@@ -23,7 +23,7 @@ export default function IndustryCTA({
 
             <p>
               Deploy the {industry.shortTitle} solution portfolio using a
-              deployment model that matches your organization's infrastructure
+              deployment model that matches your organization&apos;s infrastructure
               and security requirements.
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function IndustryCTA({
             <div className="architecture-connector" />
 
             <div className="architecture-layer architecture-middle">
-              <strong>APEXIVEAI SHARED PLATFORM</strong>
+              <strong>APEXIVEAI LOCAL PRODUCT FOUNDATION</strong>
               <span>
                 Identity · Tenant Management · Workflow · Licensing · Audit
               </span>
@@ -63,7 +63,7 @@ export default function IndustryCTA({
         <div className="industry-cta-inner">
           <div>
             <span className="eyebrow eyebrow-light">
-              LET'S TRANSFORM YOUR OPERATIONS
+              BUILT IN MYANMAR / CONFIGURED FOR YOUR TEAM
             </span>
             <h2>
               Build the future of
@@ -71,7 +71,8 @@ export default function IndustryCTA({
               {industry.shortTitle.toLowerCase()} with ApexiveAI.
             </h2>
             <p>
-              Discuss your requirements with our enterprise solutions team.
+              Work with ApexiveAI&apos;s local product team to shape a solution
+              around your organization&apos;s needs.
             </p>
           </div>
 

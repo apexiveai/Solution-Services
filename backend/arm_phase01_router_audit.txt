@@ -1,0 +1,57 @@
+========== TELECOM ROUTERS INIT ==========
+
+========== NETWORK ROUTER ==========
+
+========== INFRASTRUCTURE ROUTER ==========
+
+========== DASHBOARD ROUTER ==========
+
+========== INCIDENT ROUTER ==========
+
+========== ISP ROUTER ==========
+
+========== MNO ROUTER ==========
+
+========== ADDITIONAL MODEL EXPORTS ==========
+
+from app.modules.telecom.models.network import (
+    TelecomModule,
+    TelecomSite,
+    TelecomDevice,
+    TelecomInterface,
+    TelecomConnection,
+    TelecomTopologyLink,
+)
+
+from app.modules.telecom.models.monitoring import (
+    TelecomMonitoringSource,
+    TelecomMetricSample,
+)
+
+from app.modules.telecom.models.operations import (
+    TelecomAlarm,
+    TelecomIncident,
+)
+
+from app.modules.telecom.models.settings import (
+    TelecomTenantSetting,
+)
+
+__all__ = [
+    "TelecomModule",
+    "TelecomSite",
+    "TelecomDevice",
+    "TelecomInterface",
+    "TelecomConnection",
+    "TelecomTopologyLink",
+    "TelecomMonitoringSource",
+    "TelecomMetricSample",
+    "TelecomAlarm",
+    "TelecomIncident",
+    "TelecomTenantSetting",
+]
+
+========== TELECOM MODEL FILES ==========
+
+========== MODULE INIT PHASE 2 ==========
+C:\Users\naing\Desktop\ApexiveAI-Enterprise-Operations-Platform\backend\scripts\init_phase2.py

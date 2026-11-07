@@ -24,7 +24,7 @@ export default function IndustryHero({ industry }: { industry: Industry }) {
         <div className="industry-hero-copy">
           <div className="industry-hero-label">
             <span className="industry-status-dot" />
-            INDUSTRY SOLUTIONS / {industry.number}
+            MYANMAR-BUILT SOLUTIONS / {industry.number}
           </div>
 
           <h1>{industry.title}</h1>
@@ -50,7 +50,7 @@ export default function IndustryHero({ industry }: { industry: Industry }) {
 
           <div className="industry-visual-core">
             <Icon size={65} strokeWidth={1.2} />
-            <strong>APEXIVE AI</strong>
+            <strong>APEXIVEAI</strong>
             <span>{industry.shortTitle.toUpperCase()}</span>
           </div>
 
@@ -67,7 +67,7 @@ export default function IndustryHero({ industry }: { industry: Industry }) {
       </div>
 
       <div className="industry-hero-bottom">
-        <span>APEXIVEAI INDUSTRY INTELLIGENCE</span>
+        <span>APEXIVEAI / BUILT IN MYANMAR</span>
         <span>AI · DATA · AUTOMATION · CLOUD</span>
       </div>
     </section>

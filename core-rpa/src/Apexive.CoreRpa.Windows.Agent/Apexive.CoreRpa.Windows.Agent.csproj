@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>Apexive.CoreRpa.Windows.Agent</AssemblyName>
+    <RootNamespace>Apexive.CoreRpa.Windows.Agent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.0" />
+    <ProjectReference Include="..\Apexive.CoreRpa.Contracts\Apexive.CoreRpa.Contracts.csproj" />
+    <ProjectReference Include="..\Apexive.CoreRpa.Ais.Runtime\Apexive.CoreRpa.Ais.Runtime.csproj" />
+    <ProjectReference Include="..\Apexive.CoreRpa.Cy.Runtime\Apexive.CoreRpa.Cy.Runtime.csproj" />
+  </ItemGroup>
+</Project>

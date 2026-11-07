@@ -4,24 +4,23 @@ import jwt
 from jwt import PyJWKClient
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from app.config import settings
 
 bearer_scheme = HTTPBearer(auto_error=False)
-
 
 class CurrentPrincipal(BaseModel):
     subject: str
     username: str | None = None
     email: str | None = None
     tenant_id: str
-    roles: list[str] = []
-    claims: dict[str, Any] = {}
+    roles: list[str] = Field(default_factory=list)
+    claims: dict[str, Any] = Field(default_factory=dict)
 
 
 @lru_cache
 def get_jwks_client() -> PyJWKClient:
-    return PyJWKClient(settings.oidc_jwks_url, cache_keys=True)
+    return PyJWKClient(settings.aeop_jwks_url, cache_keys=True)
 
 
 def _extract_roles(claims: dict[str, Any]) -> list[str]:
@@ -47,9 +46,9 @@ def get_current_principal(
         claims = jwt.decode(
             token,
             signing_key,
-            algorithms=settings.allowed_algorithms,
-            issuer=settings.oidc_issuer,
-            audience=settings.oidc_audience,
+            algorithms=settings.jwt_algorithms,
+            issuer=settings.aeop_jwt_issuer,
+            audience=settings.aeop_jwt_audience,
             options={"require": ["exp", "iat", "iss", "sub"]},
         )
     except Exception:

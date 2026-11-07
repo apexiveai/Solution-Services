@@ -75,6 +75,10 @@ class Settings(BaseSettings):
     # --------------------------------------------------
     secret_key: str = "CHANGE_THIS_DEVELOPMENT_SECRET"
     access_token_expire_minutes: int = 30
+    automation_credential_key: str = Field(
+        default="",
+        validation_alias="AEOP_AUTOMATION_CREDENTIAL_KEY",
+    )
 
     model_config = SettingsConfigDict(
         env_file=".env",

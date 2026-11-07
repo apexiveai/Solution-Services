@@ -1,0 +1,1 @@
+"""Approved event triggers."""

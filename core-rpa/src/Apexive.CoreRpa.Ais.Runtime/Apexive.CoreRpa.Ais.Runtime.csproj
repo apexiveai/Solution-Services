@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Apexive.CoreRpa.Ais.Runtime</AssemblyName>
+    <RootNamespace>Apexive.CoreRpa.Ais.Runtime</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apexive.CoreRpa.Contracts\Apexive.CoreRpa.Contracts.csproj" />
+  </ItemGroup>
+</Project>
