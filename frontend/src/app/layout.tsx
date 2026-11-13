@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SiteHeader from "@/components/site-header";
-import SiteFooter from "@/components/site-footer";
+import SiteShell from "@/components/site-shell";
 
 export const metadata: Metadata = {
   title: "ApexiveAI | Enterprise Operations & Intelligence",
@@ -17,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

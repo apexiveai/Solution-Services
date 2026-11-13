@@ -234,7 +234,7 @@ export default function SiteHeader() {
                   onClick={closeMenus}
                 >
                   <span className="products-mega-icon"><BrainCircuit size={17} /></span>
-                  <span><strong>AIS Studio</strong><small>AI workflows and model tasks</small></span>
+                  <span><strong>AIS Workflow Studio</strong><small>AI workflows and model tasks</small></span>
                   <ArrowUpRight className="products-mega-arrow" size={14} />
                 </Link>
                 <Link
@@ -243,7 +243,7 @@ export default function SiteHeader() {
                   onClick={closeMenus}
                 >
                   <span className="products-mega-icon"><ShieldCheck size={17} /></span>
-                  <span><strong>CY Studio</strong><small>Defensive alerts and response policies</small></span>
+                  <span><strong>CY Policy Studio</strong><small>Defensive alerts and response policies</small></span>
                   <ArrowUpRight className="products-mega-arrow" size={14} />
                 </Link>
               </div>
@@ -384,6 +384,15 @@ export default function SiteHeader() {
                     ))}
                 </div>
               ))}
+              <div className="mobile-studios-menu">
+                <strong>CoreRPA Studios</strong>
+                <Link href="/ais-studio" onClick={closeMenus}>
+                    AIS Workflow Studio <ArrowUpRight size={13} />
+                </Link>
+                <Link href="/cy-studio" onClick={closeMenus}>
+                    CY Policy Studio <ArrowUpRight size={13} />
+                </Link>
+              </div>
               <Link href="/products" onClick={closeMenus}>
                 Explore all products
               </Link>

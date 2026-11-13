@@ -223,7 +223,7 @@ export default function CoreRpaLicensingConsole() {
       <section className={styles.hero}>
         <div className={styles.heroGlow} />
         <div className={styles.heroInner}>
-          <Link className={styles.backLink} href="/products/apexive-cyclone-rpa">← Apexive CoreRPA</Link>
+          <Link className={styles.backLink} href="/cyclone-rpa">← Cyclone RPA</Link>
           <span className={styles.eyebrow}>INTELLIGENCE IN MOTION</span>
           <h1>Enterprise services.<br /><span>Licensed automation.</span></h1>
           <p>

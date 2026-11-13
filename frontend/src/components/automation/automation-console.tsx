@@ -720,7 +720,7 @@ export default function AutomationConsole() {
       <div className={styles.main}>
         <header className={styles.topbar}>
           <div className={styles.breadcrumb}>
-            <span>AEOP</span><ChevronRight size={14} /><span>Apexive CoreRPA</span>
+            <span>Cyclone RPA</span>
             <ChevronRight size={14} /><strong>{selectedModule.label}</strong>
           </div>
           <div className={styles.connectionStatus}>
@@ -1123,8 +1123,8 @@ export default function AutomationConsole() {
           {notice && <div className={styles.successState}><CheckCircle2 size={16} /><span>{notice}</span></div>}
 
           <footer className={styles.pageFooter}>
-            <span><LockKeyhole size={14} /> ApexiveAI CoreRPA · Governed automation workspace</span>
-            <Link href="/products/apexive-cyclone-rpa">Product overview <ArrowUpRight size={14} /></Link>
+            <span><LockKeyhole size={14} /> Cyclone RPA · Governed automation workspace</span>
+            <Link href="/cyclone-rpa">Product overview <ArrowUpRight size={14} /></Link>
           </footer>
         </div>
       </div>

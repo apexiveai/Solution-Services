@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import StudioConsole from "@/components/studios/studio-console";
+import AisWorkflowStudio from "@/components/studios/ais-workflow-studio";
 
 export const metadata: Metadata = {
   title: "AIS Studio | ApexiveAI",
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function AisStudioPage() {
-  return <StudioConsole runtime="AIS" />;
+  return <AisWorkflowStudio />;
 }

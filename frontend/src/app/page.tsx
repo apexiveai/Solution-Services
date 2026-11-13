@@ -42,6 +42,60 @@ export default function HomePage() {
     <>
       <HeroSection />
 
+      <section className="rpa-studios-section" aria-labelledby="rpa-studios-title">
+        <div className="section-container">
+          <div className="rpa-studios-heading">
+            <div>
+              <span className="eyebrow">APEXIVE CORE RPA</span>
+              <h2 id="rpa-studios-title">Choose your RPA studio.</h2>
+            </div>
+            <p>
+              Two independent workspaces for governed AI workflows and
+              policy-based event review, connected to the same licensed
+              orchestrator.
+            </p>
+          </div>
+
+          <div className="rpa-studios-grid">
+            <Link href="/ais-studio" className="rpa-studio-card rpa-studio-ais">
+              <div className="rpa-studio-card-top">
+                <span className="rpa-studio-icon"><BrainCircuit size={24} /></span>
+                <span className="rpa-studio-number">STUDIO 01</span>
+              </div>
+              <span className="rpa-studio-eyebrow">AIS RUNTIME</span>
+              <h3>AIS Workflow Studio</h3>
+              <p>
+                Design, review, publish and request runs for AI-assisted
+                workflows with approval and license controls.
+              </p>
+              <span className="rpa-studio-link">
+                Open AIS Studio <ArrowRight size={16} />
+              </span>
+            </Link>
+
+            <Link href="/cy-studio" className="rpa-studio-card rpa-studio-cy">
+              <div className="rpa-studio-card-top">
+                <span className="rpa-studio-icon"><ShieldCheck size={24} /></span>
+                <span className="rpa-studio-number">STUDIO 02</span>
+              </div>
+              <span className="rpa-studio-eyebrow">CY RUNTIME</span>
+              <h3>CY Policy Studio</h3>
+              <p>
+                Define event-matching rules, review alerts and queue
+                human-reviewed response recommendations.
+              </p>
+              <span className="rpa-studio-link">
+                Open CY Studio <ArrowRight size={16} />
+              </span>
+            </Link>
+          </div>
+          <p className="rpa-studios-note">
+            Independently designed ApexiveAI studios; executions remain subject
+            to tenant permissions, approvals and active CoreRPA licensing.
+          </p>
+        </div>
+      </section>
+
       <section className="capabilities-section">
         <div className="section-container">
           <div className="capabilities-heading">

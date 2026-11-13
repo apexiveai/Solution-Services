@@ -68,8 +68,8 @@ export default async function ProductPage({ params }: PageProps) {
                     <Link href="/licenses" className="button-primary">
                       Request a quote or license <ArrowRight size={17} />
                     </Link>
-                    <Link href="/automation" className="product-back-link">
-                      Open CoreRPA workspace <ArrowRight size={17} />
+                    <Link href="/cyclone-rpa" className="product-back-link">
+                      Open Cyclone RPA <ArrowRight size={17} />
                     </Link>
                   </>
                 )}
